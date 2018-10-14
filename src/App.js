@@ -1,28 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components';
+
+import PlanetaryStatusComponent from './components/PlanetaryStatusComponent';
+
+const StyledApp = styled.div`
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+`;
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <StyledApp className="App">
+                <header className="App-header">
+                    <PlanetaryStatusComponent
+                        name='Earth'
+                        population={4827436300}
+                        planetUrl='/planets/earth-spin.gif'
+                    />
+                </header>
+            </StyledApp>
+        );
+    }
 }
 
 export default App;
