@@ -20,7 +20,7 @@ class App extends Component {
                     <PlanetaryStatusComponent
                         name='Earth'
                         population={4827436300}
-                        planetUrl='/planets/earth-spin.gif'
+                        planetUrl='/planets/earth.png'
                     />
                 </header>
             </StyledApp>
